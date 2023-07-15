@@ -182,7 +182,8 @@ lab var seriesCensusRec "Census-recommended inflation measure, annual (1947-2022
 // Save monthly series
 cd "$directory\output"
 compress
-save adjustment_annual, replace
+save adjustment_annual.dta, replace
+export delimited using adjustment_annual.csv, replace
 
 
 // Monthly Series
@@ -205,4 +206,5 @@ lab var seriesCensusRec_mthly "Census-recommended inflation measure, monthly (XX
 // Save monthly series
 cd "$directory\output"
 compress
-save adjustment_monthly, replace
+save adjustment_monthly.dta, replace
+export delimited using adjustment_monthly.csv, replace
